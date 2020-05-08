@@ -9,6 +9,7 @@ import graphql.schema.idl.SchemaParser;
 import graphql.schema.idl.TypeDefinitionRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
@@ -154,8 +155,8 @@ public class GraphQLService {
 }
 
     
-
-    public GraphQL getGraphQL() {
+    @Bean
+    public GraphQL graphQL() {
         return graphQL;
     }
 }
